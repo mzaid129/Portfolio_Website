@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="max-w-6xl mx-auto px-6 text-center mt-16" data-aos="fade-up">
+  <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+    Hi, I'm <span class="text-primary">Muhammad Zaid</span>
+  </h1>
+  <p class="text-gray-400 text-lg mb-8">
+    A passionate Python developer specializing in Flask, Django, and automation.
+  </p>
+  <a href="/projects" class="btn-red inline-block">View My Projects</a>
+</section>
+
+<section class="max-w-5xl mx-auto px-6 mt-20 grid md:grid-cols-3 gap-8">
+  <div class="bg-darkcard p-6 rounded-xl shadow hover:shadow-red-500/20" data-aos="fade-up">
+    <h3 class="text-xl font-semibold text-white mb-2">Web Development</h3>
+    <p class="text-gray-400">Building responsive, fast web apps using Flask and Django frameworks.</p>
+  </div>
+  <div class="bg-darkcard p-6 rounded-xl shadow hover:shadow-red-500/20" data-aos="fade-up" data-aos-delay="200">
+    <h3 class="text-xl font-semibold text-white mb-2">Automation</h3>
+    <p class="text-gray-400">Automating workflows using Python scripts with Selenium and APIs.</p>
+  </div>
+  <div class="bg-darkcard p-6 rounded-xl shadow hover:shadow-red-500/20" data-aos="fade-up" data-aos-delay="400">
+    <h3 class="text-xl font-semibold text-white mb-2">Data & AI</h3>
+    <p class="text-gray-400">Exploring data analysis, AI tools, and new-age database technologies.</p>
+  </div>
+</section>
+
+{% endblock %}
