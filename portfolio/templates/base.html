@@ -15,10 +15,10 @@
       theme: {
         extend: {
           colors: {
-            primary: '#ef4444',     // red accent
-            darkbg: '#0a0a0a',      // background black
-            darkcard: '#1a1a1a',    // slightly lighter section bg
-            lightgray: '#d1d5db',   // subtle gray text
+            primary: '#ef4444',
+            darkbg: '#0a0a0a',
+            darkcard: '#1a1a1a',
+            lightgray: '#d1d5db',
           },
           fontFamily: {
             sans: ['Inter', 'ui-sans-serif', 'system-ui'],
@@ -35,10 +35,7 @@
     html { scroll-behavior: smooth; font-family: 'Inter', sans-serif; }
     body { background-color: #0a0a0a; color: #e5e5e5; }
     nav { background-color: rgba(0, 0, 0, 0.85); backdrop-filter: blur(10px); }
-    .nav-link {
-      position: relative;
-      transition: color 0.3s;
-    }
+    .nav-link { position: relative; transition: color 0.3s; }
     .nav-link::after {
       content: '';
       position: absolute;
@@ -64,7 +61,8 @@
   </style>
 </head>
 
-<body class="bg-darkbg text-lightgray">
+<!-- ✨ IMPORTANT FIX HERE ✨ -->
+<body class="bg-darkbg text-lightgray min-h-screen flex flex-col">
 
   <!-- Navbar -->
   <nav class="fixed w-full z-10 top-0 shadow-md">
@@ -85,12 +83,12 @@
   <!-- Spacer for fixed navbar -->
   <div class="h-20"></div>
 
-  <!-- Main content -->
-  <main>
+  <!-- Main content (GROWS to push footer to bottom) -->
+  <main class="flex-grow">
     {% block content %}{% endblock %}
   </main>
 
-  <!-- Footer -->
+  <!-- Footer (always at bottom now) -->
   <footer class="bg-darkcard text-center py-6 mt-16 border-t border-gray-700">
     <p class="text-gray-400">© 2025 Muhammad Zaid | Crafted with ❤️ using Flask</p>
   </footer>
@@ -100,5 +98,6 @@
   <script>
     AOS.init({ duration: 1000, once: true });
   </script>
+
 </body>
 </html>
